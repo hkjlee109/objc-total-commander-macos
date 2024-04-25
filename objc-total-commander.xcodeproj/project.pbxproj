@@ -12,6 +12,11 @@
 		BFAA30742BD9A7C0002A1E70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFAA30732BD9A7C0002A1E70 /* Assets.xcassets */; };
 		BFAA30772BD9A7C0002A1E70 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BFAA30762BD9A7C0002A1E70 /* Base */; };
 		BFAA30792BD9A7C0002A1E70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA30782BD9A7C0002A1E70 /* main.m */; };
+		BFAA30822BD9A90A002A1E70 /* TotalCommanderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA30812BD9A90A002A1E70 /* TotalCommanderViewController.m */; };
+		BFAA30892BDA2719002A1E70 /* PanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA30882BDA2719002A1E70 /* PanelViewController.m */; };
+		BFAA30912BDA2D95002A1E70 /* FileListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA30902BDA2D95002A1E70 /* FileListViewController.m */; };
+		BFAA30942BDA499F002A1E70 /* FileViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA30932BDA499F002A1E70 /* FileViewData.m */; };
+		BFAA30972BDA5F00002A1E70 /* TextCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA30962BDA5F00002A1E70 /* TextCellView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,16 @@
 		BFAA30762BD9A7C0002A1E70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFAA30782BD9A7C0002A1E70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFAA307A2BD9A7C0002A1E70 /* objc_total_commander.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = objc_total_commander.entitlements; sourceTree = "<group>"; };
+		BFAA30802BD9A90A002A1E70 /* TotalCommanderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TotalCommanderViewController.h; sourceTree = "<group>"; };
+		BFAA30812BD9A90A002A1E70 /* TotalCommanderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TotalCommanderViewController.m; sourceTree = "<group>"; };
+		BFAA30872BDA2719002A1E70 /* PanelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PanelViewController.h; sourceTree = "<group>"; };
+		BFAA30882BDA2719002A1E70 /* PanelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PanelViewController.m; sourceTree = "<group>"; };
+		BFAA308F2BDA2D95002A1E70 /* FileListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileListViewController.h; sourceTree = "<group>"; };
+		BFAA30902BDA2D95002A1E70 /* FileListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileListViewController.m; sourceTree = "<group>"; };
+		BFAA30922BDA499F002A1E70 /* FileViewData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileViewData.h; sourceTree = "<group>"; };
+		BFAA30932BDA499F002A1E70 /* FileViewData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileViewData.m; sourceTree = "<group>"; };
+		BFAA30952BDA5F00002A1E70 /* TextCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextCellView.h; sourceTree = "<group>"; };
+		BFAA30962BDA5F00002A1E70 /* TextCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextCellView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +71,7 @@
 		BFAA306C2BD9A7BD002A1E70 /* objc-total-commander */ = {
 			isa = PBXGroup;
 			children = (
+				BFAA30832BD9A91C002A1E70 /* TotalCommander */,
 				BFAA306D2BD9A7BD002A1E70 /* AppDelegate.h */,
 				BFAA306E2BD9A7BD002A1E70 /* AppDelegate.m */,
 				BFAA30702BD9A7BD002A1E70 /* ViewController.h */,
@@ -66,6 +82,23 @@
 				BFAA307A2BD9A7C0002A1E70 /* objc_total_commander.entitlements */,
 			);
 			path = "objc-total-commander";
+			sourceTree = "<group>";
+		};
+		BFAA30832BD9A91C002A1E70 /* TotalCommander */ = {
+			isa = PBXGroup;
+			children = (
+				BFAA30922BDA499F002A1E70 /* FileViewData.h */,
+				BFAA30932BDA499F002A1E70 /* FileViewData.m */,
+				BFAA308F2BDA2D95002A1E70 /* FileListViewController.h */,
+				BFAA30902BDA2D95002A1E70 /* FileListViewController.m */,
+				BFAA30872BDA2719002A1E70 /* PanelViewController.h */,
+				BFAA30882BDA2719002A1E70 /* PanelViewController.m */,
+				BFAA30952BDA5F00002A1E70 /* TextCellView.h */,
+				BFAA30962BDA5F00002A1E70 /* TextCellView.m */,
+				BFAA30802BD9A90A002A1E70 /* TotalCommanderViewController.h */,
+				BFAA30812BD9A90A002A1E70 /* TotalCommanderViewController.m */,
+			);
+			path = TotalCommander;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +172,11 @@
 			files = (
 				BFAA30722BD9A7BD002A1E70 /* ViewController.m in Sources */,
 				BFAA30792BD9A7C0002A1E70 /* main.m in Sources */,
+				BFAA30912BDA2D95002A1E70 /* FileListViewController.m in Sources */,
+				BFAA30892BDA2719002A1E70 /* PanelViewController.m in Sources */,
+				BFAA30972BDA5F00002A1E70 /* TextCellView.m in Sources */,
+				BFAA30822BD9A90A002A1E70 /* TotalCommanderViewController.m in Sources */,
+				BFAA30942BDA499F002A1E70 /* FileViewData.m in Sources */,
 				BFAA306F2BD9A7BD002A1E70 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
