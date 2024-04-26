@@ -13,8 +13,8 @@
         _nameTextField.bezeled = NO;
         _nameTextField.editable = NO;
         _nameTextField.backgroundColor = [NSColor clearColor];
-        _nameTextField.alignment = NSTextAlignmentCenter;
-        [_nameTextField setFont:[NSFont systemFontOfSize:14]];
+        _nameTextField.alignment = NSTextAlignmentLeft;
+        [_nameTextField setFont:[NSFont systemFontOfSize:12]];
         [_nameTextField.leadingAnchor constraintEqualToAnchor:self.leadingAnchor].active = YES;
         [_nameTextField.trailingAnchor constraintEqualToAnchor:self.trailingAnchor].active = YES;
         [_nameTextField.centerYAnchor constraintEqualToAnchor:self.centerYAnchor].active = YES;

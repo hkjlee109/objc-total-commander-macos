@@ -1,13 +1,7 @@
 #import "FileListViewController.h"
-#import "FileViewData.h"
+#import "FileListViewController+NSTableViewDelegate.h"
+#import "FileListViewController+NSTableViewDataSource.h"
 #import "TextCellView.h"
-
-@interface FileListViewController () <NSTableViewDelegate, NSTableViewDataSource> {
-    NSTableView* _tableView;
-    NSScrollView* _scrollView;
-    NSArray<FileViewData*>* _files;
-}
-@end
 
 @implementation FileListViewController
 
@@ -20,8 +14,7 @@
     _files = [items copy];
     
     _tableView = [NSTableView new];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
+    _tableView.allowsMultipleSelection = YES;
 
     _scrollView = [NSScrollView new];
     _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -43,30 +36,19 @@
     
     [_tableView addTableColumn:iconColumn];
     [_tableView addTableColumn:nameColumn];
-}
-
-- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return _files.count;
-}
-
-- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    NSString *identifier = tableColumn.identifier;
-    if([identifier isEqualToString:@"name"]) {
-        TextCellView* view = [tableView makeViewWithIdentifier:identifier owner:self];
-        if(view == nil) {
-            view = [TextCellView new];
-            view.identifier = identifier;
-        }
-        view.name = _files[row].name;
-        return view;
-    } else if([tableColumn.identifier isEqualToString:@"icon"]){
-        return nil;
-    }
     
-    return nil;
+    [self setupTableViewDelegate];
+    [self setupTableViewDataSource];
 }
 
-- (void)tableViewSelectionDidChange:(NSNotification *)notification {
+- (void)keyDown:(NSEvent *)event {
+    if ([[event characters] characterAtIndex:0] == NSTabCharacter) {
+        if (([event modifierFlags] & NSEventModifierFlagShift) != NSEventModifierFlagShift) {
+        }
+    }
+    else {
+        [super keyDown:event];
+    }
 }
 
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BFA0E8D22BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8CF2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m */; };
+		BFA0E8D52BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8D42BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m */; };
 		BFAA306F2BD9A7BD002A1E70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA306E2BD9A7BD002A1E70 /* AppDelegate.m */; };
 		BFAA30722BD9A7BD002A1E70 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA30712BD9A7BD002A1E70 /* ViewController.m */; };
 		BFAA30742BD9A7C0002A1E70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFAA30732BD9A7C0002A1E70 /* Assets.xcassets */; };
@@ -20,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BFA0E8CE2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FileListViewController+NSTableViewDelegate.h"; sourceTree = "<group>"; };
+		BFA0E8CF2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FileListViewController+NSTableViewDelegate.m"; sourceTree = "<group>"; };
+		BFA0E8D32BDB999F0012F66C /* FileListViewController+NSTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FileListViewController+NSTableViewDataSource.h"; sourceTree = "<group>"; };
+		BFA0E8D42BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FileListViewController+NSTableViewDataSource.m"; sourceTree = "<group>"; };
 		BFAA306A2BD9A7BD002A1E70 /* objc-total-commander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc-total-commander.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAA306D2BD9A7BD002A1E70 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFAA306E2BD9A7BD002A1E70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -52,6 +58,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BFA0E8CD2BDB95350012F66C /* FileList */ = {
+			isa = PBXGroup;
+			children = (
+				BFAA308F2BDA2D95002A1E70 /* FileListViewController.h */,
+				BFAA30902BDA2D95002A1E70 /* FileListViewController.m */,
+				BFA0E8CE2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.h */,
+				BFA0E8CF2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m */,
+				BFA0E8D32BDB999F0012F66C /* FileListViewController+NSTableViewDataSource.h */,
+				BFA0E8D42BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m */,
+				BFAA30922BDA499F002A1E70 /* FileViewData.h */,
+				BFAA30932BDA499F002A1E70 /* FileViewData.m */,
+				BFAA30952BDA5F00002A1E70 /* TextCellView.h */,
+				BFAA30962BDA5F00002A1E70 /* TextCellView.m */,
+			);
+			path = FileList;
+			sourceTree = "<group>";
+		};
 		BFAA30612BD9A7BD002A1E70 = {
 			isa = PBXGroup;
 			children = (
@@ -87,14 +110,9 @@
 		BFAA30832BD9A91C002A1E70 /* TotalCommander */ = {
 			isa = PBXGroup;
 			children = (
-				BFAA30922BDA499F002A1E70 /* FileViewData.h */,
-				BFAA30932BDA499F002A1E70 /* FileViewData.m */,
-				BFAA308F2BDA2D95002A1E70 /* FileListViewController.h */,
-				BFAA30902BDA2D95002A1E70 /* FileListViewController.m */,
+				BFA0E8CD2BDB95350012F66C /* FileList */,
 				BFAA30872BDA2719002A1E70 /* PanelViewController.h */,
 				BFAA30882BDA2719002A1E70 /* PanelViewController.m */,
-				BFAA30952BDA5F00002A1E70 /* TextCellView.h */,
-				BFAA30962BDA5F00002A1E70 /* TextCellView.m */,
 				BFAA30802BD9A90A002A1E70 /* TotalCommanderViewController.h */,
 				BFAA30812BD9A90A002A1E70 /* TotalCommanderViewController.m */,
 			);
@@ -176,7 +194,9 @@
 				BFAA30892BDA2719002A1E70 /* PanelViewController.m in Sources */,
 				BFAA30972BDA5F00002A1E70 /* TextCellView.m in Sources */,
 				BFAA30822BD9A90A002A1E70 /* TotalCommanderViewController.m in Sources */,
+				BFA0E8D52BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m in Sources */,
 				BFAA30942BDA499F002A1E70 /* FileViewData.m in Sources */,
+				BFA0E8D22BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m in Sources */,
 				BFAA306F2BD9A7BD002A1E70 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
