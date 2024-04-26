@@ -25,7 +25,7 @@
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
-    NSIndexSet* indexes = self.tableView.selectedRowIndexes;
+//    NSIndexSet* indexes = self.tableView.selectedRowIndexes;
 }
 
 - (BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row {

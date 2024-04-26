@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		BFA0E8D22BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8CF2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m */; };
 		BFA0E8D52BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8D42BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m */; };
+		BFA0E8D82BDBAEA80012F66C /* TotalCommanderWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8D72BDBAEA80012F66C /* TotalCommanderWindowController.m */; };
+		BFA0E8DD2BDBCAD90012F66C /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8DC2BDBCAD90012F66C /* MainMenu.m */; };
 		BFAA306F2BD9A7BD002A1E70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA306E2BD9A7BD002A1E70 /* AppDelegate.m */; };
-		BFAA30722BD9A7BD002A1E70 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA30712BD9A7BD002A1E70 /* ViewController.m */; };
 		BFAA30742BD9A7C0002A1E70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFAA30732BD9A7C0002A1E70 /* Assets.xcassets */; };
-		BFAA30772BD9A7C0002A1E70 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BFAA30762BD9A7C0002A1E70 /* Base */; };
 		BFAA30792BD9A7C0002A1E70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA30782BD9A7C0002A1E70 /* main.m */; };
 		BFAA30822BD9A90A002A1E70 /* TotalCommanderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA30812BD9A90A002A1E70 /* TotalCommanderViewController.m */; };
 		BFAA30892BDA2719002A1E70 /* PanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA30882BDA2719002A1E70 /* PanelViewController.m */; };
@@ -26,13 +26,14 @@
 		BFA0E8CF2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FileListViewController+NSTableViewDelegate.m"; sourceTree = "<group>"; };
 		BFA0E8D32BDB999F0012F66C /* FileListViewController+NSTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FileListViewController+NSTableViewDataSource.h"; sourceTree = "<group>"; };
 		BFA0E8D42BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FileListViewController+NSTableViewDataSource.m"; sourceTree = "<group>"; };
+		BFA0E8D62BDBAEA80012F66C /* TotalCommanderWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TotalCommanderWindowController.h; sourceTree = "<group>"; };
+		BFA0E8D72BDBAEA80012F66C /* TotalCommanderWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TotalCommanderWindowController.m; sourceTree = "<group>"; };
+		BFA0E8DB2BDBCAD90012F66C /* MainMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
+		BFA0E8DC2BDBCAD90012F66C /* MainMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
 		BFAA306A2BD9A7BD002A1E70 /* objc-total-commander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc-total-commander.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAA306D2BD9A7BD002A1E70 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFAA306E2BD9A7BD002A1E70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BFAA30702BD9A7BD002A1E70 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BFAA30712BD9A7BD002A1E70 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BFAA30732BD9A7C0002A1E70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BFAA30762BD9A7C0002A1E70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFAA30782BD9A7C0002A1E70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFAA307A2BD9A7C0002A1E70 /* objc_total_commander.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = objc_total_commander.entitlements; sourceTree = "<group>"; };
 		BFAA30802BD9A90A002A1E70 /* TotalCommanderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TotalCommanderViewController.h; sourceTree = "<group>"; };
@@ -75,6 +76,15 @@
 			path = FileList;
 			sourceTree = "<group>";
 		};
+		BFA0E8DA2BDBCA4F0012F66C /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				BFA0E8DB2BDBCAD90012F66C /* MainMenu.h */,
+				BFA0E8DC2BDBCAD90012F66C /* MainMenu.m */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		BFAA30612BD9A7BD002A1E70 = {
 			isa = PBXGroup;
 			children = (
@@ -97,10 +107,9 @@
 				BFAA30832BD9A91C002A1E70 /* TotalCommander */,
 				BFAA306D2BD9A7BD002A1E70 /* AppDelegate.h */,
 				BFAA306E2BD9A7BD002A1E70 /* AppDelegate.m */,
-				BFAA30702BD9A7BD002A1E70 /* ViewController.h */,
-				BFAA30712BD9A7BD002A1E70 /* ViewController.m */,
+				BFA0E8D62BDBAEA80012F66C /* TotalCommanderWindowController.h */,
+				BFA0E8D72BDBAEA80012F66C /* TotalCommanderWindowController.m */,
 				BFAA30732BD9A7C0002A1E70 /* Assets.xcassets */,
-				BFAA30752BD9A7C0002A1E70 /* Main.storyboard */,
 				BFAA30782BD9A7C0002A1E70 /* main.m */,
 				BFAA307A2BD9A7C0002A1E70 /* objc_total_commander.entitlements */,
 			);
@@ -110,6 +119,7 @@
 		BFAA30832BD9A91C002A1E70 /* TotalCommander */ = {
 			isa = PBXGroup;
 			children = (
+				BFA0E8DA2BDBCA4F0012F66C /* Menu */,
 				BFA0E8CD2BDB95350012F66C /* FileList */,
 				BFAA30872BDA2719002A1E70 /* PanelViewController.h */,
 				BFAA30882BDA2719002A1E70 /* PanelViewController.m */,
@@ -177,7 +187,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFAA30742BD9A7C0002A1E70 /* Assets.xcassets in Resources */,
-				BFAA30772BD9A7C0002A1E70 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,10 +197,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFAA30722BD9A7BD002A1E70 /* ViewController.m in Sources */,
 				BFAA30792BD9A7C0002A1E70 /* main.m in Sources */,
 				BFAA30912BDA2D95002A1E70 /* FileListViewController.m in Sources */,
 				BFAA30892BDA2719002A1E70 /* PanelViewController.m in Sources */,
+				BFA0E8D82BDBAEA80012F66C /* TotalCommanderWindowController.m in Sources */,
+				BFA0E8DD2BDBCAD90012F66C /* MainMenu.m in Sources */,
 				BFAA30972BDA5F00002A1E70 /* TextCellView.m in Sources */,
 				BFAA30822BD9A90A002A1E70 /* TotalCommanderViewController.m in Sources */,
 				BFA0E8D52BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m in Sources */,
@@ -202,17 +212,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		BFAA30752BD9A7C0002A1E70 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFAA30762BD9A7C0002A1E70 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BFAA307B2BD9A7C0002A1E70 /* Debug */ = {
@@ -343,7 +342,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSMainStoryboardFile = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -369,7 +368,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSMainStoryboardFile = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

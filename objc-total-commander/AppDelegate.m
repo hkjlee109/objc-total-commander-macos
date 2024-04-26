@@ -1,16 +1,23 @@
 #import "AppDelegate.h"
+#import "TotalCommanderWindowController.h"
 
 @interface AppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation AppDelegate {
+    TotalCommanderWindowController* windowController;
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    if(windowController == nil) {
+        windowController = [TotalCommanderWindowController new];
+    }
+    
+    [windowController.window orderFront:self];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
 }
 
 - (BOOL)applicationSupportsSecureRestorableState:(NSApplication *)app {
