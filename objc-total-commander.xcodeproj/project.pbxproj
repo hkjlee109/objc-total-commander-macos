@@ -13,6 +13,8 @@
 		BFA0E8DD2BDBCAD90012F66C /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8DC2BDBCAD90012F66C /* MainMenu.m */; };
 		BFA0E8E42BDE47250012F66C /* FileMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8E32BDE47250012F66C /* FileMenuItem.m */; };
 		BFA0E8E72BDE4AB90012F66C /* AppMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8E62BDE4AB90012F66C /* AppMenuItem.m */; };
+		BFA0E8EB2BDE80770012F66C /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8EA2BDE80770012F66C /* FileManager.m */; };
+		BFA0E8F42BDEDA1C0012F66C /* FileData.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8F32BDEDA1C0012F66C /* FileData.m */; };
 		BFAA306F2BD9A7BD002A1E70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA306E2BD9A7BD002A1E70 /* AppDelegate.m */; };
 		BFAA30742BD9A7C0002A1E70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFAA30732BD9A7C0002A1E70 /* Assets.xcassets */; };
 		BFAA30792BD9A7C0002A1E70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA30782BD9A7C0002A1E70 /* main.m */; };
@@ -36,6 +38,10 @@
 		BFA0E8E32BDE47250012F66C /* FileMenuItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileMenuItem.m; sourceTree = "<group>"; };
 		BFA0E8E52BDE4AB90012F66C /* AppMenuItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMenuItem.h; sourceTree = "<group>"; };
 		BFA0E8E62BDE4AB90012F66C /* AppMenuItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppMenuItem.m; sourceTree = "<group>"; };
+		BFA0E8E92BDE80770012F66C /* FileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		BFA0E8EA2BDE80770012F66C /* FileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		BFA0E8F22BDEDA1C0012F66C /* FileData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileData.h; sourceTree = "<group>"; };
+		BFA0E8F32BDEDA1C0012F66C /* FileData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileData.m; sourceTree = "<group>"; };
 		BFAA306A2BD9A7BD002A1E70 /* objc-total-commander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc-total-commander.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAA306D2BD9A7BD002A1E70 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFAA306E2BD9A7BD002A1E70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -95,6 +101,17 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
+		BFA0E8E82BDE80420012F66C /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				BFA0E8F22BDEDA1C0012F66C /* FileData.h */,
+				BFA0E8F32BDEDA1C0012F66C /* FileData.m */,
+				BFA0E8E92BDE80770012F66C /* FileManager.h */,
+				BFA0E8EA2BDE80770012F66C /* FileManager.m */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
 		BFAA30612BD9A7BD002A1E70 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				BFAA30832BD9A91C002A1E70 /* TotalCommander */,
+				BFA0E8E82BDE80420012F66C /* FileManager */,
 				BFAA306D2BD9A7BD002A1E70 /* AppDelegate.h */,
 				BFAA306E2BD9A7BD002A1E70 /* AppDelegate.m */,
 				BFA0E8D62BDBAEA80012F66C /* TotalCommanderWindowController.h */,
@@ -207,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFA0E8F42BDEDA1C0012F66C /* FileData.m in Sources */,
 				BFAA30792BD9A7C0002A1E70 /* main.m in Sources */,
 				BFAA30912BDA2D95002A1E70 /* FileListViewController.m in Sources */,
 				BFAA30892BDA2719002A1E70 /* PanelViewController.m in Sources */,
@@ -216,6 +235,7 @@
 				BFAA30972BDA5F00002A1E70 /* TextCellView.m in Sources */,
 				BFAA30822BD9A90A002A1E70 /* TotalCommanderViewController.m in Sources */,
 				BFA0E8D52BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m in Sources */,
+				BFA0E8EB2BDE80770012F66C /* FileManager.m in Sources */,
 				BFAA30942BDA499F002A1E70 /* FileViewData.m in Sources */,
 				BFA0E8E72BDE4AB90012F66C /* AppMenuItem.m in Sources */,
 				BFA0E8D22BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m in Sources */,
@@ -347,6 +367,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "objc-total-commander/objc_total_commander.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -373,6 +394,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "objc-total-commander/objc_total_commander.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;

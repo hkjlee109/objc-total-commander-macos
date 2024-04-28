@@ -8,11 +8,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSMutableArray* items = [NSMutableArray new];
-    [items addObject:[[FileViewData alloc] initWithFileData]];
-    [items addObject:[[FileViewData alloc] initWithFileData]];
-    _files = [items copy];
-    
     _tableView = [NSTableView new];
     _tableView.allowsMultipleSelection = YES;
 
@@ -49,6 +44,11 @@
     else {
         [super keyDown:event];
     }
+}
+
+- (void)setFiles:(NSArray<FileViewData*>*)files {
+    _files = files;
+    [_tableView reloadData];
 }
 
 @end

@@ -1,10 +1,11 @@
+#import "FileData.h"
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FileViewData : NSObject
 
-- (id)initWithFileData;
+- (id)initWithFileData:(FileData*)fileData;
 
 @property (nonatomic, readonly) NSString* name;
 

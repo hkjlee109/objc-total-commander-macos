@@ -2,8 +2,12 @@
 
 @implementation FileViewData
 
-- (id)initWithFileData {
-    _name = @"New";
+- (id)initWithFileData:(FileData*)fileData {
+    self = [super init];
+    if(!self) {
+        return nil;
+    }
+    _name = fileData.name;
     return self;
 }
 
