@@ -21,4 +21,24 @@
     [self addSplitViewItem:rightItem];
 }
 
+- (void)didTapView {
+    
+}
+
+- (void)didTapEdit { 
+    
+}
+
+- (void)didTapNewFolder { 
+    
+}
+
+- (void)didTapRename { 
+    
+}
+
+- (void)didTapDelete {
+    
+}
+
 @end
