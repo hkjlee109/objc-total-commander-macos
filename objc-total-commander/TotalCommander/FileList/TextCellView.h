@@ -4,7 +4,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TextCellView : NSTableCellView
 
-@property (nonatomic, strong) NSString* name;
+@property (nonatomic, strong) NSTextField* nameTextField;
 
 @end
 

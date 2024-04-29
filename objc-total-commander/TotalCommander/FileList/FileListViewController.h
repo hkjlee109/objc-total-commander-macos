@@ -8,6 +8,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSTableView* tableView;
 @property (nonatomic, strong) NSScrollView* scrollView;
 @property (nonatomic, strong) NSArray<FileViewData*>* files;
+@property (nonatomic, strong) NSSet<NSString*>* selectedFiles;
+
+- (void)renameSelected;
 
 @end
 

@@ -1,8 +1,6 @@
 #import "TextCellView.h"
 
-@implementation TextCellView {
-    NSTextField* _nameTextField;
-}
+@implementation TextCellView 
 
 - (instancetype)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
@@ -24,11 +22,6 @@
 
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
-}
-
-- (void)setName:(NSString*)name {
-    _name = name;
-    _nameTextField.stringValue = _name;
 }
 
 @end

@@ -15,6 +15,7 @@
 		BFA0E8E72BDE4AB90012F66C /* AppMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8E62BDE4AB90012F66C /* AppMenuItem.m */; };
 		BFA0E8EB2BDE80770012F66C /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8EA2BDE80770012F66C /* FileManager.m */; };
 		BFA0E8F42BDEDA1C0012F66C /* FileData.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8F32BDEDA1C0012F66C /* FileData.m */; };
+		BFA0E8F72BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8F62BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.m */; };
 		BFAA306F2BD9A7BD002A1E70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA306E2BD9A7BD002A1E70 /* AppDelegate.m */; };
 		BFAA30742BD9A7C0002A1E70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFAA30732BD9A7C0002A1E70 /* Assets.xcassets */; };
 		BFAA30792BD9A7C0002A1E70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA30782BD9A7C0002A1E70 /* main.m */; };
@@ -42,6 +43,8 @@
 		BFA0E8EA2BDE80770012F66C /* FileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		BFA0E8F22BDEDA1C0012F66C /* FileData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileData.h; sourceTree = "<group>"; };
 		BFA0E8F32BDEDA1C0012F66C /* FileData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileData.m; sourceTree = "<group>"; };
+		BFA0E8F52BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FileListViewController+NSTextFieldDelegate.h"; sourceTree = "<group>"; };
+		BFA0E8F62BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FileListViewController+NSTextFieldDelegate.m"; sourceTree = "<group>"; };
 		BFAA306A2BD9A7BD002A1E70 /* objc-total-commander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc-total-commander.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAA306D2BD9A7BD002A1E70 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFAA306E2BD9A7BD002A1E70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,6 +81,8 @@
 				BFAA30902BDA2D95002A1E70 /* FileListViewController.m */,
 				BFA0E8CE2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.h */,
 				BFA0E8CF2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m */,
+				BFA0E8F52BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.h */,
+				BFA0E8F62BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.m */,
 				BFA0E8D32BDB999F0012F66C /* FileListViewController+NSTableViewDataSource.h */,
 				BFA0E8D42BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m */,
 				BFAA30922BDA499F002A1E70 /* FileViewData.h */,
@@ -227,6 +232,7 @@
 			files = (
 				BFA0E8F42BDEDA1C0012F66C /* FileData.m in Sources */,
 				BFAA30792BD9A7C0002A1E70 /* main.m in Sources */,
+				BFA0E8F72BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.m in Sources */,
 				BFAA30912BDA2D95002A1E70 /* FileListViewController.m in Sources */,
 				BFAA30892BDA2719002A1E70 /* PanelViewController.m in Sources */,
 				BFA0E8D82BDBAEA80012F66C /* TotalCommanderWindowController.m in Sources */,

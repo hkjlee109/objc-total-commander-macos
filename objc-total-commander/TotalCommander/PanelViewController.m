@@ -39,4 +39,9 @@
     _fileList.files = r;
 }
 
+
+- (void)renameSelected {
+    [_fileList renameSelected];
+}
+
 @end

@@ -3,6 +3,10 @@
 #import "FileListViewController+NSTableViewDataSource.h"
 #import "TextCellView.h"
 
+@interface FileListViewController () {
+}
+@end
+
 @implementation FileListViewController
 
 - (void)viewDidLoad {
@@ -37,6 +41,7 @@
 }
 
 - (void)keyDown:(NSEvent *)event {
+    [super keyDown:event];
     if ([[event characters] characterAtIndex:0] == NSTabCharacter) {
         if (([event modifierFlags] & NSEventModifierFlagShift) != NSEventModifierFlagShift) {
         }
@@ -49,6 +54,16 @@
 - (void)setFiles:(NSArray<FileViewData*>*)files {
     _files = files;
     [_tableView reloadData];
+}
+
+- (void)renameSelected {
+    if(_selectedFiles.count != 1) { return; }
+    
+    NSInteger column = [_tableView columnWithIdentifier:@"name"];
+    NSTextField* toEdit = ((TextCellView*)[_tableView viewAtColumn:column 
+                                                               row:_tableView.selectedRow
+                                                   makeIfNecessary:NO]).nameTextField;
+    [self.view.window makeFirstResponder:toEdit];
 }
 
 @end

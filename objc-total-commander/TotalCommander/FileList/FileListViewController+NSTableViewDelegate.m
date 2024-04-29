@@ -1,4 +1,5 @@
 #import "FileListViewController+NSTableViewDelegate.h"
+#import "FileListViewController+NSTextFieldDelegate.h"
 #import "TextCellView.h"
 
 @implementation FileListViewController (NSTableViewDelegate)
@@ -15,7 +16,9 @@
             view = [TextCellView new];
             view.identifier = identifier;
         }
-        view.name = self.files[row].name;
+        view.nameTextField.stringValue = self.files[row].name;
+        view.nameTextField.editable = YES;
+        view.nameTextField.delegate = self;
         return view;
     } else if([tableColumn.identifier isEqualToString:@"icon"]){
         return nil;
@@ -25,7 +28,12 @@
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
-//    NSIndexSet* indexes = self.tableView.selectedRowIndexes;
+    NSIndexSet* indexes = self.tableView.selectedRowIndexes;
+    NSMutableSet<NSString*>* selectedFiles = [NSMutableSet new];
+    [indexes enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {
+        [selectedFiles addObject:self.files[idx].name];
+    }];
+    self.selectedFiles = selectedFiles;
 }
 
 - (BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row {

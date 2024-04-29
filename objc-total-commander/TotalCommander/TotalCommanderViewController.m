@@ -2,8 +2,10 @@
 #import "PanelViewController.h"
 #import "FileListViewController.h"
 
-@interface TotalCommanderViewController ()
-
+@interface TotalCommanderViewController () {
+    PanelViewController* _leftPanel;
+    PanelViewController* _rightPanel;
+}
 @end
 
 @implementation TotalCommanderViewController
@@ -11,11 +13,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    id left = [PanelViewController new];
-    id right = [PanelViewController new];
+    _leftPanel = [PanelViewController new];
+    _rightPanel = [PanelViewController new];
     
-    NSSplitViewItem* leftItem = [NSSplitViewItem contentListWithViewController:left];
-    NSSplitViewItem* rightItem = [NSSplitViewItem contentListWithViewController:right];
+    NSSplitViewItem* leftItem = [NSSplitViewItem contentListWithViewController:_leftPanel];
+    NSSplitViewItem* rightItem = [NSSplitViewItem contentListWithViewController:_rightPanel];
     
     [self addSplitViewItem:leftItem];
     [self addSplitViewItem:rightItem];
@@ -34,7 +36,8 @@
 }
 
 - (void)didTapRename { 
-    
+    [_leftPanel renameSelected];
+    [_rightPanel renameSelected];
 }
 
 - (void)didTapDelete {
