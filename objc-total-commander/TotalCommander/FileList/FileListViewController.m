@@ -12,7 +12,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _tableView = [NSTableView new];
+    _tableView = [FileListTableView new];
     _tableView.allowsMultipleSelection = YES;
 
     _scrollView = [NSScrollView new];
@@ -45,15 +45,27 @@
     [_tableView reloadData];
 }
 
+- (BOOL)isFocused {
+    return (self.view.window.firstResponder == self.tableView)
+        && (self.tableView.selectedRowIndexes.count > 0);
+}
+
+- (void)setFocus {
+    [self.view.window makeFirstResponder:self.tableView];
+    if(self.tableView.selectedRowIndexes.count == 0) {
+        NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:0];
+        [self.tableView selectRowIndexes:indexSet byExtendingSelection:NO];
+    }
+}
+
 - (void)renameSelected {
     if(_selectedFiles.count != 1) { return; }
-    
     NSInteger column = [_tableView columnWithIdentifier:@"name"];
-    NSTextField* toEdit = ((TextCellView*)[_tableView viewAtColumn:column
-                                                               row:_tableView.selectedRow
-                                                   makeIfNecessary:NO]).nameTextField;
-    toEdit.editable = YES;
-    [self.view.window makeFirstResponder:toEdit];
+    TextCellView* view = [_tableView viewAtColumn:column
+                                              row:_tableView.selectedRow
+                                  makeIfNecessary:NO];
+    view.nameTextField.editable = YES;
+    [self.view.window makeFirstResponder:view.nameTextField];
 }
 
 @end

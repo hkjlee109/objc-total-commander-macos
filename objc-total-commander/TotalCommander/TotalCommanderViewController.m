@@ -25,7 +25,16 @@
 
 - (void)keyDown:(NSEvent *)event {
     if ([[event characters] characterAtIndex:0] == NSTabCharacter) {
-        NSLog(@"Tab pressed");
+        BOOL isLeftFocused = _leftPanel.fileList.isFocused;
+        BOOL isRightFocused = _rightPanel.fileList.isFocused;
+        
+        if(!isLeftFocused && !isRightFocused) {
+            [_leftPanel.fileList setFocus];
+        } else if(isLeftFocused && !isRightFocused) {
+            [_rightPanel.fileList setFocus];
+        } else if(!isLeftFocused && isRightFocused) {
+            [_leftPanel.fileList setFocus];
+        }
         return;
     }
 

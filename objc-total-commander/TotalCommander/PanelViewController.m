@@ -1,5 +1,4 @@
 #import "PanelViewController.h"
-#import "FileListViewController.h"
 #import "FileManager.h"
 
 @interface PanelViewController ()
@@ -8,7 +7,6 @@
 
 @implementation PanelViewController {
     FileManager* _fileManager;
-    FileListViewController* _fileList;
 }
 
 - (void)viewDidLoad {

@@ -16,6 +16,7 @@
 		BFA0E8EB2BDE80770012F66C /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8EA2BDE80770012F66C /* FileManager.m */; };
 		BFA0E8F42BDEDA1C0012F66C /* FileData.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8F32BDEDA1C0012F66C /* FileData.m */; };
 		BFA0E8F72BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8F62BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.m */; };
+		BFA0E8FA2BE2563D0012F66C /* FileListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8F92BE2563D0012F66C /* FileListTableView.m */; };
 		BFAA306F2BD9A7BD002A1E70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA306E2BD9A7BD002A1E70 /* AppDelegate.m */; };
 		BFAA30742BD9A7C0002A1E70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFAA30732BD9A7C0002A1E70 /* Assets.xcassets */; };
 		BFAA30792BD9A7C0002A1E70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA30782BD9A7C0002A1E70 /* main.m */; };
@@ -45,6 +46,8 @@
 		BFA0E8F32BDEDA1C0012F66C /* FileData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileData.m; sourceTree = "<group>"; };
 		BFA0E8F52BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FileListViewController+NSTextFieldDelegate.h"; sourceTree = "<group>"; };
 		BFA0E8F62BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FileListViewController+NSTextFieldDelegate.m"; sourceTree = "<group>"; };
+		BFA0E8F82BE2563D0012F66C /* FileListTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileListTableView.h; sourceTree = "<group>"; };
+		BFA0E8F92BE2563D0012F66C /* FileListTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileListTableView.m; sourceTree = "<group>"; };
 		BFAA306A2BD9A7BD002A1E70 /* objc-total-commander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc-total-commander.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAA306D2BD9A7BD002A1E70 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFAA306E2BD9A7BD002A1E70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				BFAA30932BDA499F002A1E70 /* FileViewData.m */,
 				BFAA30952BDA5F00002A1E70 /* TextCellView.h */,
 				BFAA30962BDA5F00002A1E70 /* TextCellView.m */,
+				BFA0E8F82BE2563D0012F66C /* FileListTableView.h */,
+				BFA0E8F92BE2563D0012F66C /* FileListTableView.m */,
 			);
 			path = FileList;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFA0E8F42BDEDA1C0012F66C /* FileData.m in Sources */,
+				BFA0E8FA2BE2563D0012F66C /* FileListTableView.m in Sources */,
 				BFAA30792BD9A7C0002A1E70 /* main.m in Sources */,
 				BFA0E8F72BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.m in Sources */,
 				BFAA30912BDA2D95002A1E70 /* FileListViewController.m in Sources */,
