@@ -40,17 +40,6 @@
     [self setupTableViewDataSource];
 }
 
-- (void)keyDown:(NSEvent *)event {
-    [super keyDown:event];
-    if ([[event characters] characterAtIndex:0] == NSTabCharacter) {
-        if (([event modifierFlags] & NSEventModifierFlagShift) != NSEventModifierFlagShift) {
-        }
-    }
-    else {
-        [super keyDown:event];
-    }
-}
-
 - (void)setFiles:(NSArray<FileViewData*>*)files {
     _files = files;
     [_tableView reloadData];
@@ -60,9 +49,10 @@
     if(_selectedFiles.count != 1) { return; }
     
     NSInteger column = [_tableView columnWithIdentifier:@"name"];
-    NSTextField* toEdit = ((TextCellView*)[_tableView viewAtColumn:column 
+    NSTextField* toEdit = ((TextCellView*)[_tableView viewAtColumn:column
                                                                row:_tableView.selectedRow
                                                    makeIfNecessary:NO]).nameTextField;
+    toEdit.editable = YES;
     [self.view.window makeFirstResponder:toEdit];
 }
 

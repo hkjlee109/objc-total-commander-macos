@@ -4,16 +4,13 @@
 
 - (id)init {
     self = [super init];
-    if(!self) {
-        return nil;
+    if(self) {
+        self.appMenuItem = [AppMenuItem new];
+        self.fileMenuItem = [FileMenuItem new];
+        
+        [self addItem:self.appMenuItem];
+        [self addItem:self.fileMenuItem];
     }
-    
-    self.appMenuItem = [AppMenuItem new];
-    self.fileMenuItem = [FileMenuItem new];
-    
-    [self addItem:self.appMenuItem];
-    [self addItem:self.fileMenuItem];
-    
     return self;
 }
 

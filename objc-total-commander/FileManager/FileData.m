@@ -6,12 +6,11 @@
   modificationDate:(NSDate*)modificationDate
        isDirectory:(BOOL)isDirectory {
     self = [super init];
-    if(!self) {
-        return nil;
+    if(self) {
+        _name = name;
+        _modificationDate = modificationDate;
+        _isDirectory = isDirectory;
     }
-    _name = name;
-    _modificationDate = modificationDate;
-    _isDirectory = isDirectory;
     return self;
 }
 

@@ -23,6 +23,15 @@
     [self addSplitViewItem:rightItem];
 }
 
+- (void)keyDown:(NSEvent *)event {
+    if ([[event characters] characterAtIndex:0] == NSTabCharacter) {
+        NSLog(@"Tab pressed");
+        return;
+    }
+
+    [super keyDown:event];
+}
+
 - (void)didTapView {
     
 }

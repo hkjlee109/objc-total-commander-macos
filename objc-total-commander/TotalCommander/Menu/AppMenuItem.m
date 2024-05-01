@@ -5,10 +5,9 @@
 - (instancetype)init
 {
     self = [super init];
-    if(!self) {
-        return nil;
+    if(self) {
+        [self setup];
     }
-    [self setup];
     return self;
 }
 

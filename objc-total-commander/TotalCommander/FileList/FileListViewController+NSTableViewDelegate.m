@@ -17,7 +17,6 @@
             view.identifier = identifier;
         }
         view.nameTextField.stringValue = self.files[row].name;
-        view.nameTextField.editable = YES;
         view.nameTextField.delegate = self;
         return view;
     } else if([tableColumn.identifier isEqualToString:@"icon"]){

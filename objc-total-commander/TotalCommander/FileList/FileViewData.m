@@ -4,10 +4,9 @@
 
 - (id)initWithFileData:(FileData*)fileData {
     self = [super init];
-    if(!self) {
-        return nil;
+    if(self) {
+        _name = fileData.name;
     }
-    _name = fileData.name;
     return self;
 }
 
