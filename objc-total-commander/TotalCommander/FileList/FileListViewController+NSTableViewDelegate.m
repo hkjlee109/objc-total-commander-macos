@@ -33,12 +33,11 @@
         [selectedFiles addObject:self.files[idx].name];
     }];
     self.selectedFiles = selectedFiles;
+    [self updateAvailableFileActions];
 }
 
 - (BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row {
     return YES;
 }
-
-
 
 @end

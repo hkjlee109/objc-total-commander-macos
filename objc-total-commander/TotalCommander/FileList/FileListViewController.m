@@ -1,6 +1,8 @@
 #import "FileListViewController.h"
 #import "FileListViewController+NSTableViewDelegate.h"
 #import "FileListViewController+NSTableViewDataSource.h"
+
+#import "FileAction.h"
 #import "TextCellView.h"
 
 @interface FileListViewController () {
@@ -56,6 +58,20 @@
         NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:0];
         [self.tableView selectRowIndexes:indexSet byExtendingSelection:NO];
     }
+    
+    [self updateAvailableFileActions];
+}
+
+- (void)updateAvailableFileActions {
+    NSUInteger actions = FileActionUpload;
+    if(self.tableView.selectedRowIndexes.count == 1) {
+        actions |= FileActionRename;
+    }
+    
+    if(self.tableView.selectedRowIndexes.count >= 1) {
+        actions |= FileActionDelete;
+    }
+    self.availableFileActionsUpdater(actions);
 }
 
 - (void)renameSelected {

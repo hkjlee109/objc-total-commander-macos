@@ -10,10 +10,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSScrollView* scrollView;
 @property (nonatomic, strong) NSArray<FileViewData*>* files;
 @property (nonatomic, strong) NSSet<NSString*>* selectedFiles;
+@property (nonatomic, copy) void (^availableFileActionsUpdater)(NSUInteger);
 
 - (BOOL)isFocused;
 - (void)setFocus;
 - (void)renameSelected;
+- (void)updateAvailableFileActions;
 
 @end
 

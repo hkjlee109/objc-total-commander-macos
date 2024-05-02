@@ -48,6 +48,7 @@
 		BFA0E8F62BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FileListViewController+NSTextFieldDelegate.m"; sourceTree = "<group>"; };
 		BFA0E8F82BE2563D0012F66C /* FileListTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileListTableView.h; sourceTree = "<group>"; };
 		BFA0E8F92BE2563D0012F66C /* FileListTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileListTableView.m; sourceTree = "<group>"; };
+		BFA0E8FB2BE393D70012F66C /* FileAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileAction.h; sourceTree = "<group>"; };
 		BFAA306A2BD9A7BD002A1E70 /* objc-total-commander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc-total-commander.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAA306D2BD9A7BD002A1E70 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFAA306E2BD9A7BD002A1E70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		BFA0E8CD2BDB95350012F66C /* FileList */ = {
 			isa = PBXGroup;
 			children = (
+				BFA0E8FB2BE393D70012F66C /* FileAction.h */,
 				BFAA308F2BDA2D95002A1E70 /* FileListViewController.h */,
 				BFAA30902BDA2D95002A1E70 /* FileListViewController.m */,
 				BFA0E8CE2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.h */,
@@ -90,10 +92,10 @@
 				BFA0E8D42BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m */,
 				BFAA30922BDA499F002A1E70 /* FileViewData.h */,
 				BFAA30932BDA499F002A1E70 /* FileViewData.m */,
-				BFAA30952BDA5F00002A1E70 /* TextCellView.h */,
-				BFAA30962BDA5F00002A1E70 /* TextCellView.m */,
 				BFA0E8F82BE2563D0012F66C /* FileListTableView.h */,
 				BFA0E8F92BE2563D0012F66C /* FileListTableView.m */,
+				BFAA30952BDA5F00002A1E70 /* TextCellView.h */,
+				BFAA30962BDA5F00002A1E70 /* TextCellView.m */,
 			);
 			path = FileList;
 			sourceTree = "<group>";

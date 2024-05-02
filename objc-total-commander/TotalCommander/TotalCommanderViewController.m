@@ -1,6 +1,8 @@
 #import "TotalCommanderViewController.h"
-#import "PanelViewController.h"
+
 #import "FileListViewController.h"
+#import "MainMenu.h"
+#import "PanelViewController.h"
 
 @interface TotalCommanderViewController () {
     PanelViewController* _leftPanel;
@@ -15,6 +17,21 @@
     
     _leftPanel = [PanelViewController new];
     _rightPanel = [PanelViewController new];
+    
+    __weak TotalCommanderViewController *weakSelf = self;
+    _leftPanel.fileList.availableFileActionsUpdater = ^(NSUInteger actions){
+        TotalCommanderViewController *strongSelf = weakSelf;
+        [strongSelf availableFileActionsHandler:actions];
+        if(strongSelf) {
+            [strongSelf availableFileActionsHandler:actions];
+        }
+    };
+    _rightPanel.fileList.availableFileActionsUpdater = ^(NSUInteger actions){
+        TotalCommanderViewController *strongSelf = weakSelf;
+        if(strongSelf) {
+            [strongSelf availableFileActionsHandler:actions];
+        }
+    };
     
     NSSplitViewItem* leftItem = [NSSplitViewItem contentListWithViewController:_leftPanel];
     NSSplitViewItem* rightItem = [NSSplitViewItem contentListWithViewController:_rightPanel];
@@ -39,6 +56,11 @@
     }
 
     [super keyDown:event];
+}
+
+- (void)availableFileActionsHandler:(NSUInteger)actions {
+    MainMenu* mainMenu = (MainMenu*)NSApplication.sharedApplication.mainMenu;
+    mainMenu.fileMenuItem.availableFileActions = actions;
 }
 
 - (void)didTapView {

@@ -1,18 +1,25 @@
 #import "FileMenuItem.h"
+#import "FileAction.h"
+
+@interface FileMenuItem() <NSMenuDelegate>
+
+@end
 
 @implementation FileMenuItem
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if(self) {
+        self.submenu = [[NSMenu alloc] initWithTitle:@"File"];
+        self.submenu.delegate = self;
+        self.submenu.autoenablesItems = NO;
         [self setup];
     }
     return self;
 }
 
 - (void)setup {
-    self.submenu = [[NSMenu alloc] initWithTitle:@"File"];
+    [self.submenu removeAllItems];
     
     NSMenuItem* view = [NSMenuItem new];
     view.title = @"View";
@@ -35,7 +42,7 @@
     NSMenuItem* rename = [NSMenuItem new];
     rename.title = @"Rename";
     rename.target = self;
-    rename.enabled = YES;
+    rename.enabled = _availableFileActions & FileActionRename;
     rename.action = @selector(handleRename:);
     rename.keyEquivalent = @"\uF709"; // NSF6FunctionKey
     rename.keyEquivalentModifierMask = 0;
@@ -53,11 +60,15 @@
     NSMenuItem* delete = [NSMenuItem new];
     delete.title = @"Delete";
     delete.target = self;
-    delete.enabled = YES;
+    delete.enabled = _availableFileActions & FileActionDelete;
     delete.action = @selector(handleRename:);
     delete.keyEquivalent = @"\uF70B"; // NSF8FunctionKey
     delete.keyEquivalentModifierMask = 0;
     [self.submenu addItem:delete];
+}
+
+- (void)menuWillOpen:(NSMenu *)menu {
+    [self setup];
 }
 
 - (void)handleView:(NSMenuItem*)sender {

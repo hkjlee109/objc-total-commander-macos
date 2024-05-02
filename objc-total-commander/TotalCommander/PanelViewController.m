@@ -9,10 +9,17 @@
     FileManager* _fileManager;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _fileList = [FileListViewController new];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    _fileList = [FileListViewController new];
     
     [self addChildViewController:_fileList];
     [self.view addSubview:_fileList.view];
@@ -36,7 +43,6 @@
     }
     _fileList.files = r;
 }
-
 
 - (void)renameSelected {
     [_fileList renameSelected];
