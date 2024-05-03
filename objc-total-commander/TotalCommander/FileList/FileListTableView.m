@@ -2,17 +2,13 @@
 
 @implementation FileListTableView
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    
-    // Drawing code here.
-}
-
 - (BOOL)becomeFirstResponder {
+    [self.responderDelegate tableViewBecomeFirstResponder];
     return YES;
 }
 
 - (BOOL)resignFirstResponder {
+    [self.responderDelegate tableViewResignFirstResponder];
     return YES;
 }
 @end

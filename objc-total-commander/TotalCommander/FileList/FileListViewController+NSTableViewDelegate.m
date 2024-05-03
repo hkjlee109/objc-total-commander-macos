@@ -6,6 +6,7 @@
 
 - (void)setupTableViewDelegate {
     self.tableView.delegate = self;
+    self.tableView.responderDelegate = self;
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
@@ -38,6 +39,14 @@
 
 - (BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row {
     return YES;
+}
+
+- (void)tableViewBecomeFirstResponder { 
+    [self updateAvailableFileActions];
+}
+
+- (void)tableViewResignFirstResponder { 
+    [self updateAvailableFileActions];
 }
 
 @end

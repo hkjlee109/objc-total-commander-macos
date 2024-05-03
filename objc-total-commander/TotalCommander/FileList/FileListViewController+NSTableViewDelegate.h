@@ -2,7 +2,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FileListViewController (NSTableViewDelegate) <NSTableViewDelegate>
+@interface FileListViewController (NSTableViewDelegate)
+    <NSTableViewDelegate, FileListTableViewResponderDelegate>
 
 - (void)setupTableViewDelegate;
 

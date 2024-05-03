@@ -2,7 +2,6 @@
 #import "FileListViewController+NSTableViewDelegate.h"
 #import "FileListViewController+NSTableViewDataSource.h"
 
-#import "FileAction.h"
 #import "TextCellView.h"
 
 @interface FileListViewController () {
@@ -63,18 +62,21 @@
 }
 
 - (void)updateAvailableFileActions {
-    NSUInteger actions = FileActionUpload;
-    if(self.tableView.selectedRowIndexes.count == 1) {
-        actions |= FileActionRename;
-    }
-    
-    if(self.tableView.selectedRowIndexes.count >= 1) {
-        actions |= FileActionDelete;
+    FileActionFlags actions = 0;
+    NSUInteger selectCount = self.tableView.selectedRowIndexes.count;
+    if(selectCount > 0) {
+        actions |= FileActionFlagNewFolder;
+        actions |= FileActionFlagDelete;
+        if(selectCount == 1) {
+            actions |= FileActionFlagRename;
+        }
     }
     self.availableFileActionsUpdater(actions);
 }
 
 - (void)renameSelected {
+    if(!self.isFocused) { return; }
+    
     if(_selectedFiles.count != 1) { return; }
     NSInteger column = [_tableView columnWithIdentifier:@"name"];
     TextCellView* view = [_tableView viewAtColumn:column

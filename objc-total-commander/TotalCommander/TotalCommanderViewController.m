@@ -63,25 +63,25 @@
     mainMenu.fileMenuItem.availableFileActions = actions;
 }
 
-- (void)didTapView {
-    
-}
-
-- (void)didTapEdit { 
-    
-}
-
-- (void)didTapNewFolder { 
-    
-}
-
-- (void)didTapRename { 
-    [_leftPanel renameSelected];
-    [_rightPanel renameSelected];
-}
-
-- (void)didTapDelete {
-    
+- (void)didSelectFileMenu:(FileActionFlags)action {
+    switch(action) {
+        case FileActionFlagView:
+            break;
+        case FileActionFlagEdit:
+            break;
+        case FileActionFlagCopy:
+            break;
+        case FileActionFlagMove:
+            break;
+        case FileActionFlagRename:
+            [_leftPanel renameSelected];
+            [_rightPanel renameSelected];
+            break;
+        case FileActionFlagNewFolder:
+            break;
+        case FileActionFlagDelete:
+            break;
+    }
 }
 
 @end
