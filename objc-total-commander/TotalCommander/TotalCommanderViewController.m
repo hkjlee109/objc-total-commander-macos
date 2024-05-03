@@ -19,17 +19,16 @@
     _rightPanel = [PanelViewController new];
     
     __weak TotalCommanderViewController *weakSelf = self;
-    _leftPanel.fileList.availableFileActionsUpdater = ^(NSUInteger actions){
+    _leftPanel.fileList.onAvailableFileActionsChange = ^(NSUInteger actions){
         TotalCommanderViewController *strongSelf = weakSelf;
-        [strongSelf availableFileActionsHandler:actions];
         if(strongSelf) {
-            [strongSelf availableFileActionsHandler:actions];
+            [strongSelf updateAvailableFileActions:actions];
         }
     };
-    _rightPanel.fileList.availableFileActionsUpdater = ^(NSUInteger actions){
+    _rightPanel.fileList.onAvailableFileActionsChange = ^(NSUInteger actions){
         TotalCommanderViewController *strongSelf = weakSelf;
         if(strongSelf) {
-            [strongSelf availableFileActionsHandler:actions];
+            [strongSelf updateAvailableFileActions:actions];
         }
     };
     
@@ -58,7 +57,7 @@
     [super keyDown:event];
 }
 
-- (void)availableFileActionsHandler:(NSUInteger)actions {
+- (void)updateAvailableFileActions:(NSUInteger)actions {
     MainMenu* mainMenu = (MainMenu*)NSApplication.sharedApplication.mainMenu;
     mainMenu.fileMenuItem.availableFileActions = actions;
 }

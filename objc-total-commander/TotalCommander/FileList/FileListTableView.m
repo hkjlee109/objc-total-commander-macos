@@ -11,4 +11,5 @@
     [self.responderDelegate tableViewResignFirstResponder];
     return YES;
 }
+
 @end

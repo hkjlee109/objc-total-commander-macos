@@ -9,8 +9,7 @@
     FileManager* _fileManager;
 }
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         _fileList = [FileListViewController new];

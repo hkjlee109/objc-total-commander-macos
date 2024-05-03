@@ -71,7 +71,7 @@
             actions |= FileActionFlagRename;
         }
     }
-    self.availableFileActionsUpdater(actions);
+    self.onAvailableFileActionsChange(actions);
 }
 
 - (void)renameSelected {
