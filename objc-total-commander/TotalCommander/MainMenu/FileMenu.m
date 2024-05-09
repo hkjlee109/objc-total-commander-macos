@@ -80,4 +80,10 @@
     [self setup];
 }
 
+- (void)setAvailableFileActions:(FileActionFlags)availableFileActions {
+    if(_availableFileActions == availableFileActions) { return; }
+    _availableFileActions = availableFileActions;
+    [self setup];
+}
+
 @end
