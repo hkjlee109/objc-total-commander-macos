@@ -31,7 +31,6 @@
         self.window = panel;
         
         MainMenu* mainMenu = [MainMenu new];
-        mainMenu.fileMenu.itemDelegate = controller;
         NSApplication.sharedApplication.mainMenu = mainMenu;
     }
     return self;

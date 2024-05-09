@@ -1,12 +1,12 @@
 #import "FileListViewController.h"
+#import "FileListViewController+FileContextMenuItemDelegate.h"
 #import "FileListViewController+NSTableViewDelegate.h"
 #import "FileListViewController+NSTableViewDataSource.h"
 
-#import "FileContextMenu.h"
 #import "TextCellView.h"
 
-@interface FileListViewController () {
-}
+@interface FileListViewController ()
+
 @end
 
 @implementation FileListViewController
@@ -37,12 +37,13 @@
     
     [_tableView addTableColumn:iconColumn];
     [_tableView addTableColumn:nameColumn];
+
+    _contextMenu = [FileContextMenu new];
+    _tableView.menu = _contextMenu;
     
     [self setupTableViewDelegate];
     [self setupTableViewDataSource];
-    
-    FileContextMenu* menu = [FileContextMenu new];
-    _tableView.menu = menu;
+    [self setupFileContextMenuItemDelegate];
 }
 
 - (void)setFiles:(NSArray<FileViewData*>*)files {
@@ -80,6 +81,7 @@
 }
 
 - (void)renameSelected {
+    NSLog(@"@####@");
     if(!self.isFocused) { return; }
     
     if(_selectedFiles.count != 1) { return; }

@@ -4,7 +4,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TotalCommanderViewController : NSSplitViewController<FileMenuItemDelegate>
+@interface TotalCommanderViewController : NSSplitViewController
 
 @property (nonatomic, assign) FileActionFlags availableFileActions;
 

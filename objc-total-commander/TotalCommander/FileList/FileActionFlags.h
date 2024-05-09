@@ -11,4 +11,6 @@ typedef NS_OPTIONS(NSUInteger, FileActionFlags) {
     FileActionFlagRename             = 1 << 6,
     FileActionFlagNewFolder          = 1 << 7,
     FileActionFlagDelete             = 1 << 8,
+    
+    FileActionFlagShowInFinder       = 1 << 10,
 };

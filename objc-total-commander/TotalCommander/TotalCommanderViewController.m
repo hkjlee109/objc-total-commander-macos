@@ -53,7 +53,7 @@
         }
         return;
     }
-
+    
     [super keyDown:event];
 }
 
@@ -62,8 +62,8 @@
     mainMenu.fileMenu.availableFileActions = actions;
 }
 
-- (void)didSelectFileMenuItem:(FileActionFlags)action {
-    switch(action) {
+- (void)processFileMenuItemAction:(NSMenuItem*)sender {
+    switch(sender.tag) {
         case FileActionFlagContextMenu:
             [_leftPanel showContextMenu];
             [_rightPanel showContextMenu];

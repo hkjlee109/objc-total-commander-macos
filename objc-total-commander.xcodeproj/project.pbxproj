@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BF0CE91D2BECC73A00AD32EC /* FileContextMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0CE91C2BECC73A00AD32EC /* FileContextMenu.m */; };
 		BF0CE9202BECCECC00AD32EC /* FileMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0CE91F2BECCECC00AD32EC /* FileMenu.m */; };
+		BF0CE9222BECFA2C00AD32EC /* FileListViewController+FileContextMenuItemDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0CE9212BECFA2C00AD32EC /* FileListViewController+FileContextMenuItemDelegate.m */; };
 		BFA0E8D22BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8CF2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m */; };
 		BFA0E8D52BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8D42BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m */; };
 		BFA0E8D82BDBAEA80012F66C /* TotalCommanderWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8D72BDBAEA80012F66C /* TotalCommanderWindowController.m */; };
@@ -33,6 +34,8 @@
 		BF0CE91C2BECC73A00AD32EC /* FileContextMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileContextMenu.m; sourceTree = "<group>"; };
 		BF0CE91E2BECCECC00AD32EC /* FileMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileMenu.h; sourceTree = "<group>"; };
 		BF0CE91F2BECCECC00AD32EC /* FileMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileMenu.m; sourceTree = "<group>"; };
+		BF0CE9212BECFA2C00AD32EC /* FileListViewController+FileContextMenuItemDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FileListViewController+FileContextMenuItemDelegate.m"; sourceTree = "<group>"; };
+		BF0CE9232BECFA5C00AD32EC /* FileListViewController+FileContextMenuItemDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FileListViewController+FileContextMenuItemDelegate.h"; sourceTree = "<group>"; };
 		BFA0E8CE2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FileListViewController+NSTableViewDelegate.h"; sourceTree = "<group>"; };
 		BFA0E8CF2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FileListViewController+NSTableViewDelegate.m"; sourceTree = "<group>"; };
 		BFA0E8D32BDB999F0012F66C /* FileListViewController+NSTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FileListViewController+NSTableViewDataSource.h"; sourceTree = "<group>"; };
@@ -97,6 +100,8 @@
 				BFA0E8FB2BE393D70012F66C /* FileActionFlags.h */,
 				BFAA308F2BDA2D95002A1E70 /* FileListViewController.h */,
 				BFAA30902BDA2D95002A1E70 /* FileListViewController.m */,
+				BF0CE9232BECFA5C00AD32EC /* FileListViewController+FileContextMenuItemDelegate.h */,
+				BF0CE9212BECFA2C00AD32EC /* FileListViewController+FileContextMenuItemDelegate.m */,
 				BFA0E8CE2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.h */,
 				BFA0E8CF2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m */,
 				BFA0E8F52BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.h */,
@@ -265,6 +270,7 @@
 				BFA0E8EB2BDE80770012F66C /* FileManager.m in Sources */,
 				BFAA30942BDA499F002A1E70 /* FileViewData.m in Sources */,
 				BF0CE9202BECCECC00AD32EC /* FileMenu.m in Sources */,
+				BF0CE9222BECFA2C00AD32EC /* FileListViewController+FileContextMenuItemDelegate.m in Sources */,
 				BFA0E8E72BDE4AB90012F66C /* AppMenu.m in Sources */,
 				BFA0E8D22BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m in Sources */,
 				BFAA306F2BD9A7BD002A1E70 /* AppDelegate.m in Sources */,
