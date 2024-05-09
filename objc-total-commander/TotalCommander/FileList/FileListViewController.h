@@ -15,9 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)isFocused;
 - (void)setFocus;
-- (void)renameSelected;
 - (void)updateAvailableFileActions;
 
+- (void)renameSelected;
+- (void)showContextMenu;
+    
 @end
 
 NS_ASSUME_NONNULL_END

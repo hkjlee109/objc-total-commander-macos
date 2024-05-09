@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0CE91D2BECC73A00AD32EC /* FileContextMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0CE91C2BECC73A00AD32EC /* FileContextMenu.m */; };
+		BF0CE9202BECCECC00AD32EC /* FileMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0CE91F2BECCECC00AD32EC /* FileMenu.m */; };
 		BFA0E8D22BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8CF2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m */; };
 		BFA0E8D52BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8D42BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m */; };
 		BFA0E8D82BDBAEA80012F66C /* TotalCommanderWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8D72BDBAEA80012F66C /* TotalCommanderWindowController.m */; };
 		BFA0E8DD2BDBCAD90012F66C /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8DC2BDBCAD90012F66C /* MainMenu.m */; };
-		BFA0E8E42BDE47250012F66C /* FileMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8E32BDE47250012F66C /* FileMenuItem.m */; };
-		BFA0E8E72BDE4AB90012F66C /* AppMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8E62BDE4AB90012F66C /* AppMenuItem.m */; };
+		BFA0E8E72BDE4AB90012F66C /* AppMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8E62BDE4AB90012F66C /* AppMenu.m */; };
 		BFA0E8EB2BDE80770012F66C /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8EA2BDE80770012F66C /* FileManager.m */; };
 		BFA0E8F42BDEDA1C0012F66C /* FileData.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8F32BDEDA1C0012F66C /* FileData.m */; };
 		BFA0E8F72BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8F62BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.m */; };
@@ -28,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF0CE91B2BECC73A00AD32EC /* FileContextMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileContextMenu.h; sourceTree = "<group>"; };
+		BF0CE91C2BECC73A00AD32EC /* FileContextMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileContextMenu.m; sourceTree = "<group>"; };
+		BF0CE91E2BECCECC00AD32EC /* FileMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileMenu.h; sourceTree = "<group>"; };
+		BF0CE91F2BECCECC00AD32EC /* FileMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileMenu.m; sourceTree = "<group>"; };
 		BFA0E8CE2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FileListViewController+NSTableViewDelegate.h"; sourceTree = "<group>"; };
 		BFA0E8CF2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FileListViewController+NSTableViewDelegate.m"; sourceTree = "<group>"; };
 		BFA0E8D32BDB999F0012F66C /* FileListViewController+NSTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FileListViewController+NSTableViewDataSource.h"; sourceTree = "<group>"; };
@@ -36,10 +41,8 @@
 		BFA0E8D72BDBAEA80012F66C /* TotalCommanderWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TotalCommanderWindowController.m; sourceTree = "<group>"; };
 		BFA0E8DB2BDBCAD90012F66C /* MainMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
 		BFA0E8DC2BDBCAD90012F66C /* MainMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
-		BFA0E8E22BDE47250012F66C /* FileMenuItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileMenuItem.h; sourceTree = "<group>"; };
-		BFA0E8E32BDE47250012F66C /* FileMenuItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileMenuItem.m; sourceTree = "<group>"; };
-		BFA0E8E52BDE4AB90012F66C /* AppMenuItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMenuItem.h; sourceTree = "<group>"; };
-		BFA0E8E62BDE4AB90012F66C /* AppMenuItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppMenuItem.m; sourceTree = "<group>"; };
+		BFA0E8E52BDE4AB90012F66C /* AppMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMenu.h; sourceTree = "<group>"; };
+		BFA0E8E62BDE4AB90012F66C /* AppMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppMenu.m; sourceTree = "<group>"; };
 		BFA0E8E92BDE80770012F66C /* FileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		BFA0E8EA2BDE80770012F66C /* FileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		BFA0E8F22BDEDA1C0012F66C /* FileData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileData.h; sourceTree = "<group>"; };
@@ -78,9 +81,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF0CE91A2BECC5E300AD32EC /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				BF0CE91B2BECC73A00AD32EC /* FileContextMenu.h */,
+				BF0CE91C2BECC73A00AD32EC /* FileContextMenu.m */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		BFA0E8CD2BDB95350012F66C /* FileList */ = {
 			isa = PBXGroup;
 			children = (
+				BF0CE91A2BECC5E300AD32EC /* Menu */,
 				BFA0E8FB2BE393D70012F66C /* FileActionFlags.h */,
 				BFAA308F2BDA2D95002A1E70 /* FileListViewController.h */,
 				BFAA30902BDA2D95002A1E70 /* FileListViewController.m */,
@@ -100,17 +113,17 @@
 			path = FileList;
 			sourceTree = "<group>";
 		};
-		BFA0E8DA2BDBCA4F0012F66C /* Menu */ = {
+		BFA0E8DA2BDBCA4F0012F66C /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
 				BFA0E8DB2BDBCAD90012F66C /* MainMenu.h */,
 				BFA0E8DC2BDBCAD90012F66C /* MainMenu.m */,
-				BFA0E8E22BDE47250012F66C /* FileMenuItem.h */,
-				BFA0E8E32BDE47250012F66C /* FileMenuItem.m */,
-				BFA0E8E52BDE4AB90012F66C /* AppMenuItem.h */,
-				BFA0E8E62BDE4AB90012F66C /* AppMenuItem.m */,
+				BFA0E8E52BDE4AB90012F66C /* AppMenu.h */,
+				BFA0E8E62BDE4AB90012F66C /* AppMenu.m */,
+				BF0CE91E2BECCECC00AD32EC /* FileMenu.h */,
+				BF0CE91F2BECCECC00AD32EC /* FileMenu.m */,
 			);
-			path = Menu;
+			path = MainMenu;
 			sourceTree = "<group>";
 		};
 		BFA0E8E82BDE80420012F66C /* FileManager */ = {
@@ -159,7 +172,7 @@
 		BFAA30832BD9A91C002A1E70 /* TotalCommander */ = {
 			isa = PBXGroup;
 			children = (
-				BFA0E8DA2BDBCA4F0012F66C /* Menu */,
+				BFA0E8DA2BDBCA4F0012F66C /* MainMenu */,
 				BFA0E8CD2BDB95350012F66C /* FileList */,
 				BFAA30872BDA2719002A1E70 /* PanelViewController.h */,
 				BFAA30882BDA2719002A1E70 /* PanelViewController.m */,
@@ -243,15 +256,16 @@
 				BFA0E8F72BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.m in Sources */,
 				BFAA30912BDA2D95002A1E70 /* FileListViewController.m in Sources */,
 				BFAA30892BDA2719002A1E70 /* PanelViewController.m in Sources */,
+				BF0CE91D2BECC73A00AD32EC /* FileContextMenu.m in Sources */,
 				BFA0E8D82BDBAEA80012F66C /* TotalCommanderWindowController.m in Sources */,
 				BFA0E8DD2BDBCAD90012F66C /* MainMenu.m in Sources */,
-				BFA0E8E42BDE47250012F66C /* FileMenuItem.m in Sources */,
 				BFAA30972BDA5F00002A1E70 /* TextCellView.m in Sources */,
 				BFAA30822BD9A90A002A1E70 /* TotalCommanderViewController.m in Sources */,
 				BFA0E8D52BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m in Sources */,
 				BFA0E8EB2BDE80770012F66C /* FileManager.m in Sources */,
 				BFAA30942BDA499F002A1E70 /* FileViewData.m in Sources */,
-				BFA0E8E72BDE4AB90012F66C /* AppMenuItem.m in Sources */,
+				BF0CE9202BECCECC00AD32EC /* FileMenu.m in Sources */,
+				BFA0E8E72BDE4AB90012F66C /* AppMenu.m in Sources */,
 				BFA0E8D22BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m in Sources */,
 				BFAA306F2BD9A7BD002A1E70 /* AppDelegate.m in Sources */,
 			);

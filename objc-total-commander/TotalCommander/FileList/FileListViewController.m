@@ -2,6 +2,7 @@
 #import "FileListViewController+NSTableViewDelegate.h"
 #import "FileListViewController+NSTableViewDataSource.h"
 
+#import "FileContextMenu.h"
 #import "TextCellView.h"
 
 @interface FileListViewController () {
@@ -39,6 +40,9 @@
     
     [self setupTableViewDelegate];
     [self setupTableViewDataSource];
+    
+    FileContextMenu* menu = [FileContextMenu new];
+    _tableView.menu = menu;
 }
 
 - (void)setFiles:(NSArray<FileViewData*>*)files {
@@ -65,6 +69,7 @@
     FileActionFlags actions = 0;
     NSUInteger selectCount = self.tableView.selectedRowIndexes.count;
     if(selectCount > 0) {
+        actions |= FileActionFlagContextMenu;
         actions |= FileActionFlagNewFolder;
         actions |= FileActionFlagDelete;
         if(selectCount == 1) {
@@ -84,6 +89,20 @@
                                   makeIfNecessary:NO];
     view.nameTextField.editable = YES;
     [self.view.window makeFirstResponder:view.nameTextField];
+}
+
+- (void)showContextMenu {
+    if(!self.isFocused) { return; }
+    if(_tableView.selectedRow == -1) { return; }
+    
+    NSInteger column = [_tableView columnWithIdentifier:@"name"];
+    TextCellView* cellView = [_tableView viewAtColumn:column
+                                                  row:_tableView.selectedRow
+                                      makeIfNecessary:NO];
+    
+    [_tableView.menu popUpMenuPositioningItem:[_tableView.menu itemAtIndex:0]
+                                   atLocation:NSMakePoint(0, 0)
+                                       inView:cellView];
 }
 
 @end

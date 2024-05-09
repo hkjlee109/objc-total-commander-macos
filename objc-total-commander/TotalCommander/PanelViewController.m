@@ -47,4 +47,7 @@
     [_fileList renameSelected];
 }
 
+- (void)showContextMenu {
+    [_fileList showContextMenu];
+}
 @end

@@ -1,5 +1,5 @@
 #import "FileActionFlags.h"
-#import "FileMenuItem.h"
+#import "FileMenu.h"
 #import <Cocoa/Cocoa.h>
 
 NS_ASSUME_NONNULL_BEGIN

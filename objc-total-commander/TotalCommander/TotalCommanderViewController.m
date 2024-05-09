@@ -59,11 +59,15 @@
 
 - (void)updateAvailableFileActions:(NSUInteger)actions {
     MainMenu* mainMenu = (MainMenu*)NSApplication.sharedApplication.mainMenu;
-    mainMenu.fileMenuItem.availableFileActions = actions;
+    mainMenu.fileMenu.availableFileActions = actions;
 }
 
-- (void)didSelectFileMenu:(FileActionFlags)action {
+- (void)didSelectFileMenuItem:(FileActionFlags)action {
     switch(action) {
+        case FileActionFlagContextMenu:
+            [_leftPanel showContextMenu];
+            [_rightPanel showContextMenu];
+            break;
         case FileActionFlagView:
             break;
         case FileActionFlagEdit:

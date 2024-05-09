@@ -1,17 +1,18 @@
 #import "FileActionFlags.h"
+
 #import <Cocoa/Cocoa.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol FileMenuItemDelegate
 
-- (void)didSelectFileMenu:(FileActionFlags)action;
+- (void)didSelectFileMenuItem:(FileActionFlags)action;
 
 @end
 
-@interface FileMenuItem : NSMenuItem
+@interface FileMenu : NSMenu
 
-@property (nonatomic, weak) id<FileMenuItemDelegate> delegate;
+@property (nonatomic, weak) id<FileMenuItemDelegate> itemDelegate;
 @property (nonatomic, assign) FileActionFlags availableFileActions;
 
 @end

@@ -1,24 +1,34 @@
-#import "FileMenuItem.h"
+#import "FileMenu.h"
 
-@interface FileMenuItem() <NSMenuDelegate>
+@interface FileMenu() <NSMenuDelegate>
 
 @end
 
-@implementation FileMenuItem
+@implementation FileMenu
 
 - (instancetype)init {
     self = [super init];
     if(self) {
-        self.submenu = [[NSMenu alloc] initWithTitle:@"File"];
-        self.submenu.delegate = self;
-        self.submenu.autoenablesItems = NO;
+        self.title = @"File";
+        self.delegate = self;
+        self.autoenablesItems = NO;
         [self setup];
     }
     return self;
 }
 
 - (void)setup {
-    [self.submenu removeAllItems];
+    [self removeAllItems];
+    
+    NSMenuItem* contextMenu = [NSMenuItem new];
+    contextMenu.title = @"Context Menu";
+    contextMenu.target = self;
+    contextMenu.enabled = _availableFileActions & FileActionFlagContextMenu;
+    contextMenu.action = @selector(handleAction:);
+    contextMenu.tag = FileActionFlagContextMenu;
+    contextMenu.keyEquivalent = @"\uF705"; // NSF3FunctionKey
+    contextMenu.keyEquivalentModifierMask = 0;
+    [self addItem:contextMenu];
     
     NSMenuItem* view = [NSMenuItem new];
     view.title = @"View";
@@ -28,7 +38,7 @@
     view.tag = FileActionFlagView;
     view.keyEquivalent = @"\uF706"; // NSF3FunctionKey
     view.keyEquivalentModifierMask = 0;
-    [self.submenu addItem:view];
+    [self addItem:view];
     
     NSMenuItem* edit = [NSMenuItem new];
     edit.title = @"Edit";
@@ -38,7 +48,7 @@
     edit.tag = FileActionFlagEdit;
     edit.keyEquivalent = @"\uF707"; // NSF4FunctionKey
     edit.keyEquivalentModifierMask = 0;
-    [self.submenu addItem:edit];
+    [self addItem:edit];
     
     NSMenuItem* rename = [NSMenuItem new];
     rename.title = @"Rename";
@@ -48,7 +58,7 @@
     rename.tag = FileActionFlagRename;
     rename.keyEquivalent = @"\uF709"; // NSF6FunctionKey
     rename.keyEquivalentModifierMask = 0;
-    [self.submenu addItem:rename];
+    [self addItem:rename];
     
     NSMenuItem* newFolder = [NSMenuItem new];
     newFolder.title = @"New Folder";
@@ -58,7 +68,7 @@
     newFolder.tag = FileActionFlagNewFolder;
     newFolder.keyEquivalent = @"\uF70A"; // NSF7FunctionKey
     newFolder.keyEquivalentModifierMask = 0;
-    [self.submenu addItem:newFolder];
+    [self addItem:newFolder];
     
     NSMenuItem* delete = [NSMenuItem new];
     delete.title = @"Delete";
@@ -68,7 +78,7 @@
     delete.tag = FileActionFlagDelete;
     delete.keyEquivalent = @"\uF70B"; // NSF8FunctionKey
     delete.keyEquivalentModifierMask = 0;
-    [self.submenu addItem:delete];
+    [self addItem:delete];
 }
 
 - (void)menuWillOpen:(NSMenu *)menu {
@@ -76,7 +86,7 @@
 }
 
 - (void)handleAction:(NSMenuItem*)sender {
-    [self.delegate didSelectFileMenu:sender.tag];
+    [self.itemDelegate didSelectFileMenuItem:sender.tag];
 }
 
 @end
