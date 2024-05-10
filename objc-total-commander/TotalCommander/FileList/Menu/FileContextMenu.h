@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FileContextMenu : NSMenu
 
 @property (nonatomic, weak) id<FileContextMenuItemDelegate> itemDelegate;
+@property (nonatomic, assign) FileActionFlags availableFileActions;
 
 @end
 

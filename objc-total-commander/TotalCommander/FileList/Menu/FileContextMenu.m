@@ -5,15 +5,18 @@
 - (id)init {
     self = [super init];
     if(self) {
+        self.autoenablesItems = NO;
         [self setup];
     }
     return self;
 }
 
 - (void)setup {
+    [self removeAllItems];
+    
     NSMenuItem* show = [NSMenuItem new];
     show.title = @"Show in Finder";
-    show.enabled = YES;
+    show.enabled = _availableFileActions & FileActionFlagShowInFinder;
     show.action = @selector(processAction:);
     show.target = self;
     show.tag = FileActionFlagShowInFinder;
@@ -23,7 +26,7 @@
     
     NSMenuItem* rename = [NSMenuItem new];
     rename.title = @"Rename";
-    rename.enabled = YES;
+    rename.enabled = _availableFileActions & FileActionFlagRename;
     rename.action = @selector(processAction:);
     rename.target = self;
     rename.tag = FileActionFlagRename;
@@ -33,7 +36,7 @@
     
     NSMenuItem* delete = [NSMenuItem new];
     delete.title = @"Delete";
-    delete.enabled = YES;
+    delete.enabled = _availableFileActions & FileActionFlagDelete;
     delete.action = @selector(processAction:);
     delete.target = self;
     delete.tag = FileActionFlagDelete;
@@ -44,6 +47,12 @@
 
 - (void)processAction:(NSMenuItem*)sender {
     [self.itemDelegate didSelectFileContextMenuItem:sender.tag];
+}
+
+- (void)setAvailableFileActions:(FileActionFlags)availableFileActions {
+    if(_availableFileActions == availableFileActions) { return; }
+    _availableFileActions = availableFileActions;
+    [self setup];
 }
 
 @end

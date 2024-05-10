@@ -1,5 +1,5 @@
 #import "FileListViewController.h"
-#import "FileListViewController+FileContextMenuItemDelegate.h"
+#import "FileListViewController+NSMenuDelegate.h"
 #import "FileListViewController+NSTableViewDelegate.h"
 #import "FileListViewController+NSTableViewDataSource.h"
 
@@ -43,7 +43,7 @@
     
     [self setupTableViewDelegate];
     [self setupTableViewDataSource];
-    [self setupFileContextMenuItemDelegate];
+    [self setupMenuDelegate];
 }
 
 - (void)setFiles:(NSArray<FileViewData*>*)files {
@@ -81,7 +81,6 @@
 }
 
 - (void)renameSelected {
-    NSLog(@"@####@");
     if(!self.isFocused) { return; }
     
     if(_selectedFiles.count != 1) { return; }
