@@ -7,6 +7,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (id)initWithFileData:(FileData*)fileData;
 
+@property (nonatomic, readonly) NSString* uuid;
 @property (nonatomic, readonly) NSString* name;
 
 @end

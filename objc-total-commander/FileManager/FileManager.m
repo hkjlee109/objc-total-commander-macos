@@ -3,9 +3,11 @@
 @implementation FileManager
 
 - (NSArray*)getFileList:(NSString*)path {
+    NSURL* url = [NSURL URLWithString:path];
+
     NSError* error;
     NSArray* urls = [[NSFileManager defaultManager]
-        contentsOfDirectoryAtURL:[NSURL fileURLWithPath:path]
+        contentsOfDirectoryAtURL:url//[NSURL fileURLWithPath:path]
         includingPropertiesForKeys:@[
             NSURLIsDirectoryKey,
             NSURLIsSymbolicLinkKey,
@@ -29,6 +31,10 @@
         [url getResourceValue:&name 
                        forKey:NSURLNameKey error:nil];
         
+        NSURL* parentDirectoryURL;
+        [url getResourceValue:&parentDirectoryURL
+                       forKey:NSURLParentDirectoryURLKey error:nil];
+        
         NSDate* modificationDate;
         [url getResourceValue:&modificationDate 
                        forKey:NSURLContentModificationDateKey
@@ -39,6 +45,7 @@
                        forKey:NSURLIsDirectoryKey error:nil];
         
         FileData* data = [[FileData alloc] initWithData:name
+                                     parentDirectoryURL:parentDirectoryURL
                                        modificationDate:modificationDate
                                             isDirectory:isDirectory];
         

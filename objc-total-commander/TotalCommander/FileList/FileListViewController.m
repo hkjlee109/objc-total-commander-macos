@@ -1,4 +1,5 @@
 #import "FileListViewController.h"
+#import "FileListViewController+NSFilePromiseProviderDelegate.h"
 #import "FileListViewController+NSMenuDelegate.h"
 #import "FileListViewController+NSTableViewDelegate.h"
 #import "FileListViewController+NSTableViewDataSource.h"
@@ -16,7 +17,9 @@
     
     _tableView = [FileListTableView new];
     _tableView.allowsMultipleSelection = YES;
-
+    [_tableView setDraggingSourceOperationMask:NSDragOperationCopy forLocal:YES];
+    [_tableView registerForDraggedTypes:@[NSFilesPromisePboardType, NSFilenamesPboardType]];
+    
     _scrollView = [NSScrollView new];
     _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
     _scrollView.documentView = _tableView;
@@ -74,6 +77,7 @@
         actions |= FileActionFlagNewFolder;
         actions |= FileActionFlagDelete;
         if(selectCount == 1) {
+            actions |= FileActionFlagView;
             actions |= FileActionFlagRename;
         }
     }
@@ -104,6 +108,32 @@
     [_tableView.menu popUpMenuPositioningItem:[_tableView.menu itemAtIndex:0]
                                    atLocation:NSMakePoint(0, 0)
                                        inView:cellView];
+}
+
+- (id<NSPasteboardWriting>)tableView:(NSTableView *)tableView pasteboardWriterForRow:(NSInteger)row {
+    NSFilePromiseProvider* provider = [[NSFilePromiseProvider alloc] initWithFileType:kUTTypeData delegate:self];
+    provider.userInfo = @"tmp";
+    return provider;
+}
+
+- (NSDragOperation)tableView:(NSTableView *)tableView validateDrop:(id<NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)dropOperation {
+    return NSDragOperationCopy;
+}
+
+- (BOOL)tableView:(NSTableView *)tableView writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard *)pboard {
+    return YES;
+}
+
+- (BOOL)tableView:(NSTableView *)tableView acceptDrop:(id<NSDraggingInfo>)info row:(NSInteger)row dropOperation:(NSTableViewDropOperation)dropOperation {
+    return YES;
+}
+
+- (void)tableView:(NSTableView *)tableView draggingSession:(NSDraggingSession *)session willBeginAtPoint:(NSPoint)screenPoint forRowIndexes:(NSIndexSet *)rowIndexes {
+    NSLog(@"# draggingSession: willBeginAtPoint");
+}
+
+- (void)tableView:(NSTableView *)tableView draggingSession:(NSDraggingSession *)session endedAtPoint:(NSPoint)screenPoint operation:(NSDragOperation)operation {
+    NSLog(@"# draggingSession: endedAtPoint");
 }
 
 @end

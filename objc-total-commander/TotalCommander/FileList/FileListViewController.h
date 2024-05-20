@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) FileContextMenu* contextMenu;
 @property (nonatomic, strong) NSScrollView* scrollView;
 @property (nonatomic, strong) NSArray<FileViewData*>* files;
-@property (nonatomic, strong) NSSet<NSString*>* selectedFiles;
+@property (nonatomic, strong) NSArray<NSString*>* selectedFiles;
 @property (nonatomic, copy) void (^onAvailableFileActionsChange)(FileActionFlags);
 
 - (BOOL)isFocused;

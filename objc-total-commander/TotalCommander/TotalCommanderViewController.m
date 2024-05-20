@@ -5,8 +5,8 @@
 #import "PanelViewController.h"
 
 @interface TotalCommanderViewController () {
-    PanelViewController* _leftPanel;
-    PanelViewController* _rightPanel;
+//    PanelViewController* _leftPanel;
+//    PanelViewController* _rightPanel;
 }
 @end
 
@@ -69,6 +69,12 @@
             [_rightPanel showContextMenu];
             break;
         case FileActionFlagView:
+            if ([QLPreviewPanel sharedPreviewPanelExists]
+                && [[QLPreviewPanel sharedPreviewPanel] isVisible]) {
+                [[QLPreviewPanel sharedPreviewPanel] orderOut:nil];
+            } else {
+                [[QLPreviewPanel sharedPreviewPanel] makeKeyAndOrderFront:nil];
+            }
             break;
         case FileActionFlagEdit:
             break;

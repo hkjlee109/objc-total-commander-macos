@@ -29,10 +29,11 @@
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
     NSIndexSet* indexes = self.tableView.selectedRowIndexes;
-    NSMutableSet<NSString*>* selectedFiles = [NSMutableSet new];
+    NSMutableArray* selectedFiles = [NSMutableArray new];
     [indexes enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {
-        [selectedFiles addObject:self.files[idx].name];
+        [selectedFiles addObject:self.files[idx].uuid];
     }];
+
     self.selectedFiles = selectedFiles;
     [self updateAvailableFileActions];
 }

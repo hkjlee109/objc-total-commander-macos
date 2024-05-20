@@ -28,6 +28,7 @@
         actions |= FileActionFlagShowInFinder;
         actions |= FileActionFlagDelete;
         if(selectCount == 1) {
+            actions |= FileActionFlagView;
             actions |= FileActionFlagRename;
         }
     }
