@@ -58,7 +58,7 @@
 
 - (NSArray<FileData*>*)selectedFiles {
     NSMutableArray* r = [NSMutableArray new];
-    for(NSString* uuid in _fileList.selectedFiles) {
+    for(NSString* uuid in _fileList.selectedFileIDs) {
         [r addObject:[_files valueForKey:uuid]];
     }
     return r;

@@ -1,11 +1,12 @@
-#import "FileListViewController+NSTableViewDelegate.h"
+#import "FileListViewController+NSTableView.h"
 #import "FileListViewController+NSTextFieldDelegate.h"
 #import "TextCellView.h"
 
 @implementation FileListViewController (NSTableViewDelegate)
 
-- (void)setupTableViewDelegate {
+- (void)setupTableView {
     self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     self.tableView.responderDelegate = self;
 }
 
@@ -29,17 +30,21 @@
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
     NSIndexSet* indexes = self.tableView.selectedRowIndexes;
-    NSMutableArray* selectedFiles = [NSMutableArray new];
+    NSMutableArray* selectedFileIDs = [NSMutableArray new];
     [indexes enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop) {
-        [selectedFiles addObject:self.files[idx].uuid];
+        [selectedFileIDs addObject:self.files[idx].uuid];
     }];
 
-    self.selectedFiles = selectedFiles;
+    self.selectedFileIDs = selectedFileIDs;
     [self updateAvailableFileActions];
 }
 
 - (BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row {
     return YES;
+}
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+    return self.files.count;
 }
 
 - (void)tableViewBecomeFirstResponder { 

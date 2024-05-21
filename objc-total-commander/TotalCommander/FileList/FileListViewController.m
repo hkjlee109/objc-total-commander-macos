@@ -1,8 +1,7 @@
 #import "FileListViewController.h"
 #import "FileListViewController+NSFilePromiseProviderDelegate.h"
 #import "FileListViewController+NSMenuDelegate.h"
-#import "FileListViewController+NSTableViewDelegate.h"
-#import "FileListViewController+NSTableViewDataSource.h"
+#import "FileListViewController+NSTableView.h"
 
 #import "TextCellView.h"
 
@@ -44,14 +43,20 @@
     _contextMenu = [FileContextMenu new];
     _tableView.menu = _contextMenu;
     
-    [self setupTableViewDelegate];
-    [self setupTableViewDataSource];
+    [self setupTableView];
     [self setupMenuDelegate];
 }
 
 - (void)setFiles:(NSArray<FileViewData*>*)files {
     _files = files;
     [_tableView reloadData];
+}
+
+- (NSArray<NSString*>*)selectedFileIDs {
+    if([self isFocused]) {
+        return _selectedFileIDs;
+    }
+    return nil;
 }
 
 - (BOOL)isFocused {
@@ -87,7 +92,7 @@
 - (void)renameSelected {
     if(!self.isFocused) { return; }
     
-    if(_selectedFiles.count != 1) { return; }
+    if(_selectedFileIDs.count != 1) { return; }
     NSInteger column = [_tableView columnWithIdentifier:@"name"];
     TextCellView* view = [_tableView viewAtColumn:column
                                               row:_tableView.selectedRow

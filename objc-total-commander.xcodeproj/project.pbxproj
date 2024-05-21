@@ -11,8 +11,7 @@
 		BF0CE9202BECCECC00AD32EC /* FileMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0CE91F2BECCECC00AD32EC /* FileMenu.m */; };
 		BF0CE9222BECFA2C00AD32EC /* FileListViewController+NSMenuDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0CE9212BECFA2C00AD32EC /* FileListViewController+NSMenuDelegate.m */; };
 		BF5692002BFB612500EFCBFD /* TotalCommanderViewController+QLPreviewPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5691FF2BFB612500EFCBFD /* TotalCommanderViewController+QLPreviewPanel.m */; };
-		BFA0E8D22BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8CF2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m */; };
-		BFA0E8D52BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8D42BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m */; };
+		BFA0E8D22BDB95D80012F66C /* FileListViewController+NSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8CF2BDB95D80012F66C /* FileListViewController+NSTableView.m */; };
 		BFA0E8D82BDBAEA80012F66C /* TotalCommanderWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8D72BDBAEA80012F66C /* TotalCommanderWindowController.m */; };
 		BFA0E8DD2BDBCAD90012F66C /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8DC2BDBCAD90012F66C /* MainMenu.m */; };
 		BFA0E8E72BDE4AB90012F66C /* AppMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0E8E62BDE4AB90012F66C /* AppMenu.m */; };
@@ -40,10 +39,8 @@
 		BF0CE9232BECFA5C00AD32EC /* FileListViewController+NSMenuDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FileListViewController+NSMenuDelegate.h"; sourceTree = "<group>"; };
 		BF5691FE2BFB60BE00EFCBFD /* TotalCommanderViewController+QLPreviewPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TotalCommanderViewController+QLPreviewPanel.h"; sourceTree = "<group>"; };
 		BF5691FF2BFB612500EFCBFD /* TotalCommanderViewController+QLPreviewPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TotalCommanderViewController+QLPreviewPanel.m"; sourceTree = "<group>"; };
-		BFA0E8CE2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FileListViewController+NSTableViewDelegate.h"; sourceTree = "<group>"; };
-		BFA0E8CF2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FileListViewController+NSTableViewDelegate.m"; sourceTree = "<group>"; };
-		BFA0E8D32BDB999F0012F66C /* FileListViewController+NSTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FileListViewController+NSTableViewDataSource.h"; sourceTree = "<group>"; };
-		BFA0E8D42BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FileListViewController+NSTableViewDataSource.m"; sourceTree = "<group>"; };
+		BFA0E8CE2BDB95D80012F66C /* FileListViewController+NSTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FileListViewController+NSTableView.h"; sourceTree = "<group>"; };
+		BFA0E8CF2BDB95D80012F66C /* FileListViewController+NSTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FileListViewController+NSTableView.m"; sourceTree = "<group>"; };
 		BFA0E8D62BDBAEA80012F66C /* TotalCommanderWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TotalCommanderWindowController.h; sourceTree = "<group>"; };
 		BFA0E8D72BDBAEA80012F66C /* TotalCommanderWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TotalCommanderWindowController.m; sourceTree = "<group>"; };
 		BFA0E8DB2BDBCAD90012F66C /* MainMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
@@ -110,12 +107,10 @@
 				BFED12072BF21D2B00BD6B81 /* FileListViewController+NSFilePromiseProviderDelegate.m */,
 				BF0CE9232BECFA5C00AD32EC /* FileListViewController+NSMenuDelegate.h */,
 				BF0CE9212BECFA2C00AD32EC /* FileListViewController+NSMenuDelegate.m */,
-				BFA0E8CE2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.h */,
-				BFA0E8CF2BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m */,
+				BFA0E8CE2BDB95D80012F66C /* FileListViewController+NSTableView.h */,
+				BFA0E8CF2BDB95D80012F66C /* FileListViewController+NSTableView.m */,
 				BFA0E8F52BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.h */,
 				BFA0E8F62BDF8C7F0012F66C /* FileListViewController+NSTextFieldDelegate.m */,
-				BFA0E8D32BDB999F0012F66C /* FileListViewController+NSTableViewDataSource.h */,
-				BFA0E8D42BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m */,
 				BFAA30922BDA499F002A1E70 /* FileViewData.h */,
 				BFAA30932BDA499F002A1E70 /* FileViewData.m */,
 				BFA0E8F82BE2563D0012F66C /* FileListTableView.h */,
@@ -276,14 +271,13 @@
 				BFA0E8DD2BDBCAD90012F66C /* MainMenu.m in Sources */,
 				BFAA30972BDA5F00002A1E70 /* TextCellView.m in Sources */,
 				BFAA30822BD9A90A002A1E70 /* TotalCommanderViewController.m in Sources */,
-				BFA0E8D52BDB99B00012F66C /* FileListViewController+NSTableViewDataSource.m in Sources */,
 				BFA0E8EB2BDE80770012F66C /* FileManager.m in Sources */,
 				BFAA30942BDA499F002A1E70 /* FileViewData.m in Sources */,
 				BF0CE9202BECCECC00AD32EC /* FileMenu.m in Sources */,
 				BF0CE9222BECFA2C00AD32EC /* FileListViewController+NSMenuDelegate.m in Sources */,
 				BFA0E8E72BDE4AB90012F66C /* AppMenu.m in Sources */,
 				BFED12082BF21D2B00BD6B81 /* FileListViewController+NSFilePromiseProviderDelegate.m in Sources */,
-				BFA0E8D22BDB95D80012F66C /* FileListViewController+NSTableViewDelegate.m in Sources */,
+				BFA0E8D22BDB95D80012F66C /* FileListViewController+NSTableView.m in Sources */,
 				BF5692002BFB612500EFCBFD /* TotalCommanderViewController+QLPreviewPanel.m in Sources */,
 				BFAA306F2BD9A7BD002A1E70 /* AppDelegate.m in Sources */,
 			);

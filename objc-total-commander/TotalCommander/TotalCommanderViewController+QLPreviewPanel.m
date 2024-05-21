@@ -35,15 +35,11 @@
 }
 
 - (NSInteger)numberOfPreviewItemsInPreviewPanel:(QLPreviewPanel *)panel { 
-    return self.leftPanel.selectedFiles.count;
+    return self.selectedFiles.count;
 }
 
-- (id<QLPreviewItem>)previewPanel:(QLPreviewPanel *)panel previewItemAtIndex:(NSInteger)index { 
-    FileData* data = [[FileData alloc] initWithData:@"Intro.rtf"
-                                 parentDirectoryURL:[NSURL URLWithString:@"/Users/kyung"]
-                                   modificationDate:[NSDate alloc]
-                                        isDirectory:NO];
-    return self.leftPanel.selectedFiles[index];
+- (id<QLPreviewItem>)previewPanel:(QLPreviewPanel *)panel previewItemAtIndex:(NSInteger)index {
+    return self.selectedFiles[index];
 }
 
 @end

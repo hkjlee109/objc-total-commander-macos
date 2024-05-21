@@ -11,8 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) FileActionFlags availableFileActions;
 @property (nonatomic, strong, nullable) QLPreviewPanel* previewPanel;
 
-@property (nonatomic, strong) PanelViewController* leftPanel;
-@property (nonatomic, strong) PanelViewController* rightPanel;
+- (NSArray<FileData*>*)selectedFiles;
 
 @end
 

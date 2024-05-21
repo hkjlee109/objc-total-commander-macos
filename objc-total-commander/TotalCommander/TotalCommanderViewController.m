@@ -5,8 +5,8 @@
 #import "PanelViewController.h"
 
 @interface TotalCommanderViewController () {
-//    PanelViewController* _leftPanel;
-//    PanelViewController* _rightPanel;
+    PanelViewController* _leftPanel;
+    PanelViewController* _rightPanel;
 }
 @end
 
@@ -55,6 +55,10 @@
     }
     
     [super keyDown:event];
+}
+
+- (NSArray<FileData*>*)selectedFiles {
+    return [_leftPanel.selectedFiles arrayByAddingObjectsFromArray:_rightPanel.selectedFiles];
 }
 
 - (void)updateAvailableFileActions:(NSUInteger)actions {
