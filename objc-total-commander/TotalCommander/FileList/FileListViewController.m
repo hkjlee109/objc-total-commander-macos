@@ -92,8 +92,8 @@
     TextCellView* view = [_tableView viewAtColumn:column
                                               row:_tableView.selectedRow
                                   makeIfNecessary:NO];
-    view.nameTextField.editable = YES;
-    [self.view.window makeFirstResponder:view.nameTextField];
+    view.textField.editable = YES;
+    [self.view.window makeFirstResponder:view.textField];
 }
 
 - (void)showContextMenu {

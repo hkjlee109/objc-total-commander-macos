@@ -17,8 +17,8 @@
             view = [TextCellView new];
             view.identifier = identifier;
         }
-        view.nameTextField.stringValue = self.files[row].name;
-        view.nameTextField.delegate = self;
+        view.textField.stringValue = self.files[row].name;
+        view.textField.delegate = self;
         return view;
     } else if([tableColumn.identifier isEqualToString:@"icon"]){
         return nil;

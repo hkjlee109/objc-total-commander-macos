@@ -1,6 +1,12 @@
 #import "TextCellView.h"
 
-@implementation TextCellView 
+@interface TextCellView () {
+    NSTextField* _nameTextField;
+}
+
+@end
+
+@implementation TextCellView
 
 - (instancetype)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
@@ -16,12 +22,9 @@
         [_nameTextField.leadingAnchor constraintEqualToAnchor:self.leadingAnchor].active = YES;
         [_nameTextField.trailingAnchor constraintEqualToAnchor:self.trailingAnchor].active = YES;
         [_nameTextField.centerYAnchor constraintEqualToAnchor:self.centerYAnchor].active = YES;
+        self.textField = _nameTextField;
     }
     return self;
-}
-
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
 }
 
 @end
